@@ -1,9 +1,6 @@
 import React from "react";
 
 export const Rating = ({ value, number }) => {
-  let fullStar = "fa-solid fa-star";
-  let halfStar = "fa-solid fa-star-half-stroke";
-  let emptyStar = "fa-regular fa-star";
   return (
     <div className="rating">
       <span>
