@@ -2,7 +2,7 @@ import React from "react";
 
 export const Rating = ({ value, number }) => {
   return (
-    <div className="rating">
+    <div className='rating'>
       <span>
         <i
           className={
