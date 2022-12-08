@@ -26,7 +26,41 @@ export const ProductScreen = (props) => {
             <ListGroup.Item>
               <Rating value={product.rating} number={product.numReviews} />
             </ListGroup.Item>
+            <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
+            <ListGroup.Item>Description: {product.description}</ListGroup.Item>
           </ListGroup>
+        </Col>
+        <Col md={3}>
+          <Card>
+            <ListGroup variant='flush'>
+              <ListGroup.Item>
+                <Row>
+                  <Col>Price:</Col>
+                  <Col>
+                    <strong>${product.price}</strong>
+                  </Col>
+                </Row>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <Row>
+                  <Col>Status:</Col>
+                  <Col>
+                    {product.countInStock ? "In Stock" : "Out of Stock"}
+                  </Col>
+                </Row>
+              </ListGroup.Item>
+              <ListGroup.Item className='d-grid gap-2'>
+                <Button
+                  variant='outline-light'
+                  type='button'
+                  size='lg'
+                  disabled={!product.countInStock}
+                >
+                  Add To Cart
+                </Button>
+              </ListGroup.Item>
+            </ListGroup>
+          </Card>
         </Col>
       </Row>
     </>
