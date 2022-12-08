@@ -49,6 +49,7 @@ export const Rating = ({ value, number }) => {
               : "fa-regular fa-star"
           }
         />
+        <span>{` ${number} reviews`}</span>
       </span>
     </div>
   );
