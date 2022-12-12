@@ -6,8 +6,7 @@ const products = require("./data/products");
 require("dotenv").config();
 
 app.get("/api/products", (req, res) => {
-  res.send("Working");
-  console.log("This is the products: ", products);
+  res.status(200).send(products);
 });
 
 app.get("/api/products/:id", (req, res) => {
