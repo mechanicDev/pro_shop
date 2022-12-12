@@ -6,10 +6,12 @@ const products = require("./data/products");
 require("dotenv").config();
 
 app.get("/api/products", (req, res) => {
+  console.log("TEsting");
   res.status(200).send(products);
 });
 
 app.get("/api/products/:id", (req, res) => {
+  console.log("Running??");
   let id = req.params.id;
   let product = products.find((p) => id === p._id);
   res.status(200).json(product);
