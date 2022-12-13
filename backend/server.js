@@ -1,10 +1,11 @@
-const express = require("express");
+import express from "express";
+import DOTENV from "dotenv";
+import products from "./data/products.js";
+
 const app = express();
-const DOTENV = require("dotenv");
 DOTENV.config();
 const PORT = process.env.PORT || 5000;
 const NODE_ENV = process.env.NODE_ENV;
-const products = require("./data/products");
 
 app.get("/api/products", (req, res) => {
   res.status(200).send(products);
