@@ -24,7 +24,7 @@ const reviewSchema = new Schema(
 const productSchema = mongoose.Schema(
   {
     user: {
-      type: mongoose.Schema.Types.objectId,
+      type: mongoose.Types.ObjectId,
       required: true,
       ref: "User",
     },
