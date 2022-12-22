@@ -12,6 +12,7 @@ export const ProductScreen = (props) => {
   useEffect(() => {
     const fetchProduct = async function () {
       const { data } = await axios.get(`/api/products/${id}`);
+      // console.log("This is the data: ", data);
       setProduct(data);
     };
     fetchProduct();

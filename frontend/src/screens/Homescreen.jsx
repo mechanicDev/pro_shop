@@ -5,9 +5,12 @@ import axios from "axios";
 
 export const Homescreen = ({ product }) => {
   const [products, setProducts] = useState([]);
+
+  // Get products from the product API and establish them in Homescreen State
   useEffect(() => {
     const fetchProducts = async function () {
       const { data } = await axios.get("/api/products");
+      console.log("Data from the homescreen fetch: ", data);
       setProducts(data);
     };
     fetchProducts();
