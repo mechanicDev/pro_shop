@@ -5,7 +5,7 @@ import colors from "colors";
 import users from "./data/users.js";
 import products from "./data/products.js";
 // DataBase Models
-import { Order, Product, User } from "./models/orderModel.js";
+import { Order, Product, User } from "./models/exportedModels.js";
 
 // DB Connection
 import connectDB from "./config/db.js";
@@ -57,3 +57,5 @@ if (process.argv[2] === "-d") {
 } else {
   importData();
 }
+
+// ?retryWrites=true&w=majority
