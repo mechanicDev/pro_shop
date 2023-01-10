@@ -2,6 +2,9 @@ import express from "express";
 const router = express.Router();
 import Product from "../models/productModel.js";
 
+// @description Fetch All Products
+// @route GET /api/products
+// @access Public
 router.get("/", async (req, res) => {
   try {
     let products = await Product.find({});
@@ -12,6 +15,9 @@ router.get("/", async (req, res) => {
   }
 });
 
+// @description Fetch a single product
+// @route GET /api/products/:id
+// @access Public
 router.get("/:id", async (req, res) => {
   try {
     let id = req.params.id;
